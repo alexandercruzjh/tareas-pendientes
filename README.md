@@ -1,69 +1,52 @@
-# React + TypeScript + Vite
+# Aplicación de Tareas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta es una **aplicación de gestión de tareas** desarrollada con React y TypeScript.  
+Permite organizar tareas, establecer fechas de vencimiento y mostrar alertas visuales cuando las tareas están próximas a vencer o ya vencidas.  
 
-Currently, two official plugins are available:
+Incluye un sistema de progreso general y persistencia de datos en **localStorage**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías utilizadas
+- **React** con **TypeScript** para la lógica y la UI
+- **TailwindCSS** y **shadcn/ui** para estilos y componentes
+- **Zod** para validación de datos
+- **Lucide-react** para íconos
 
-## Expanding the ESLint configuration
+## Características
+- Agregar, marcar como completadas y eliminar tareas
+- Indicador de progreso general
+- Diferenciación visual de:
+  - 🟢 Tareas completadas  
+  - 🟢 Tareas activas  
+  - 🟡 Tareas próximas a vencer  
+  - 🔴 Tareas vencidas  
+- Persistencia de tareas en el navegador con `localStorage`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Vista previa
+[Visitar aplicación](https://tareas-pendientes-delta.vercel.app/)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Instalación y uso
+Clona el repositorio en tu máquina local:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Instala las dependencias:
+```bash
+npm install
 ```
+
+Inicia el servidor de desarrollo:
+```bash
+npm run dev
+```
+
+La aplicación estará disponible en http://localhost:5173/ (o el puerto configurado por Vite).
+
+## Contacto
+- **LinkedIn:** [Alexander Cruz](https://www.linkedin.com/in/alexander-cruz-480526351)
+- **GitHub:** [alexandercruzjh](https://github.com/alexandercruzjh)
+- **Email:** alexandercruzjh@gmail.com
+
+---
+*Desarrollado por Alexander Cruz*
